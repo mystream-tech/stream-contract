@@ -1,0 +1,618 @@
+{
+  "contractName": "WrappedEtherInterface",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burnFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "remaining",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "\npragma solidity ^0.5.0;\n\nimport \"./EIP20Interface.sol\";\ncontract WrappedEtherInterface is EIP20Interface {\n\n    function deposit() public payable;\n\n    function withdraw(uint amount) public;\n}\n",
+  "sourcePath": "/Users/luoxiaojuan/Desktop/contract truffle/new-exchange/contracts/Mortgage/WrappedEtherInterface.sol",
+  "ast": {
+    "absolutePath": "/Users/luoxiaojuan/Desktop/contract truffle/new-exchange/contracts/Mortgage/WrappedEtherInterface.sol",
+    "exportedSymbols": {
+      "WrappedEtherInterface": [
+        6431
+      ]
+    },
+    "id": 6432,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6419,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:23:41"
+      },
+      {
+        "absolutePath": "/Users/luoxiaojuan/Desktop/contract truffle/new-exchange/contracts/Mortgage/EIP20Interface.sol",
+        "file": "./EIP20Interface.sol",
+        "id": 6420,
+        "nodeType": "ImportDirective",
+        "scope": 6432,
+        "sourceUnit": 4106,
+        "src": "26:30:41",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6421,
+              "name": "EIP20Interface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4105,
+              "src": "91:14:41",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EIP20Interface_$4105",
+                "typeString": "contract EIP20Interface"
+              }
+            },
+            "id": 6422,
+            "nodeType": "InheritanceSpecifier",
+            "src": "91:14:41"
+          }
+        ],
+        "contractDependencies": [
+          4105
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6431,
+        "linearizedBaseContracts": [
+          6431,
+          4105
+        ],
+        "name": "WrappedEtherInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6423,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:2:41"
+            },
+            "returnParameters": {
+              "id": 6424,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "146:0:41"
+            },
+            "scope": 6431,
+            "src": "113:34:41",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6427,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6430,
+                  "src": "171:11:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6426,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:4:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "170:13:41"
+            },
+            "returnParameters": {
+              "id": 6429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "190:0:41"
+            },
+            "scope": 6431,
+            "src": "153:38:41",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6432,
+        "src": "57:136:41"
+      }
+    ],
+    "src": "1:193:41"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/luoxiaojuan/Desktop/contract truffle/new-exchange/contracts/Mortgage/WrappedEtherInterface.sol",
+    "exportedSymbols": {
+      "WrappedEtherInterface": [
+        6431
+      ]
+    },
+    "id": 6432,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6419,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:23:41"
+      },
+      {
+        "absolutePath": "/Users/luoxiaojuan/Desktop/contract truffle/new-exchange/contracts/Mortgage/EIP20Interface.sol",
+        "file": "./EIP20Interface.sol",
+        "id": 6420,
+        "nodeType": "ImportDirective",
+        "scope": 6432,
+        "sourceUnit": 4106,
+        "src": "26:30:41",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6421,
+              "name": "EIP20Interface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4105,
+              "src": "91:14:41",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_EIP20Interface_$4105",
+                "typeString": "contract EIP20Interface"
+              }
+            },
+            "id": 6422,
+            "nodeType": "InheritanceSpecifier",
+            "src": "91:14:41"
+          }
+        ],
+        "contractDependencies": [
+          4105
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6431,
+        "linearizedBaseContracts": [
+          6431,
+          4105
+        ],
+        "name": "WrappedEtherInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6425,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6423,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:2:41"
+            },
+            "returnParameters": {
+              "id": 6424,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "146:0:41"
+            },
+            "scope": 6431,
+            "src": "113:34:41",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6430,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6428,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6427,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6430,
+                  "src": "171:11:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6426,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:4:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "170:13:41"
+            },
+            "returnParameters": {
+              "id": 6429,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "190:0:41"
+            },
+            "scope": 6431,
+            "src": "153:38:41",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6432,
+        "src": "57:136:41"
+      }
+    ],
+    "src": "1:193:41"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2019-12-29T07:34:13.708Z",
+  "devdoc": {
+    "methods": {
+      "allowance(address,address)": {
+        "params": {
+          "_owner": "The address of the account owning tokens",
+          "_spender": "The address of the account able to transfer the tokens"
+        },
+        "return": "Amount of remaining tokens allowed to spent"
+      },
+      "approve(address,uint256)": {
+        "params": {
+          "_spender": "The address of the account able to transfer the tokens",
+          "_value": "The amount of tokens to be approved for transfer"
+        },
+        "return": "Whether the approval was successful or not"
+      },
+      "balanceOf(address)": {
+        "params": {
+          "_owner": "The address from which the balance will be retrieved"
+        },
+        "return": "The balance"
+      },
+      "transfer(address,uint256)": {
+        "params": {
+          "_to": "The address of the recipient",
+          "_value": "The amount of token to be transferred"
+        },
+        "return": "Whether the transfer was successful or not"
+      },
+      "transferFrom(address,address,uint256)": {
+        "params": {
+          "_from": "The address of the sender",
+          "_to": "The address of the recipient",
+          "_value": "The amount of token to be transferred"
+        },
+        "return": "Whether the transfer was successful or not"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "approve(address,uint256)": {
+        "notice": "`msg.sender` approves `_spender` to spend `_value` tokens"
+      },
+      "transfer(address,uint256)": {
+        "notice": "send `_value` token to `_to` from `msg.sender`"
+      },
+      "transferFrom(address,address,uint256)": {
+        "notice": "send `_value` token to `_to` from `_from` on the condition it is approved by `_from`"
+      }
+    }
+  }
+}
